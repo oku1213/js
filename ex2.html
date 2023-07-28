@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {}; //空のオブジェクト
+        let pen = {
+            color: "red",
+            length: 3
+        };
+        console.log(pen.color); //red
+        console.log(pen.length); //3
+        pen.price = 100;
+        console.log(pen.price); //100
+        pen.length = 4;
+        //pen.lenght=5;綴りを間違えてしまっても、エラーがでなく、新しく定義したとみなされる
+        let hero = {
+            name: "ロト",
+            hp: 100,
+            mp: 50
+        };
+
+        class Pen {
+            constructor(length) {
+                this.length = length;
+            }
+            write(){
+                this.length-=0.5;
+                return "書きました";
+            }
+        }
+        const p1 = new Pen(10);
+        console.log(p1.write());
+        console.log(p1.length);
+    </script>
+</body>
+</html>
