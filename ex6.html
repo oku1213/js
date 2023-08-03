@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="toi">問題</button>
+    <div id="result"></div>
+    <script>
+        window.onload = () => {
+            const toi = document.getElementById("toi");
+            const result = document.getElementById("result");
+            toi.addEventListener("click", () => {
+                const userAns = window.prompt("スカイツリーの高さは何m？");
+                if (parseInt(userAns)===634) {
+                    result.textContent = "OK";
+                } else {
+                    result.textContent = "NG...634mでした";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
